@@ -7,15 +7,15 @@ public class Inmobiliaria implements Notificable
 	
 	public Inmobiliaria(String nombre, String email, Double comisionPorVenta) 
 	{
-		nombre = nombre;
-		email = email;
-		comisionPorVenta = comisionPorVenta;
+		this.nombre = nombre;
+		this.email = email;
+		this.comisionPorVenta = comisionPorVenta;
 	}
 
 	@Override
 	public void Notificar(String mensaje) 
 	{
-		System.out.println("Enviando mail a" + nombre);
+		System.out.println("Enviando mail a " + this.nombre);
 		
 	}
 	

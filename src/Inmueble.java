@@ -9,8 +9,7 @@ public class Inmueble
 	private Double precioDolares;
 	private Boolean reservado = false;
 	
-	private ArrayList<Cliente> clientesInteresados = new ArrayList<Cliente>();
-	private ArrayList<Inmobiliaria> inmobiliariasInteresadas = new ArrayList<Inmobiliaria>();
+	private ArrayList<Notificable> interesados = new ArrayList<Notificable>();
 	
 	
 	public Inmueble(Double superficieM2, int cantidadDeHambientes, Double precioDolares,
@@ -26,24 +25,28 @@ public class Inmueble
 	public void setPrecio(Double p) 
 	{
 		this.precioDolares = p;
-		
+		notificar("Se cambio el precio");
 		
 	}
 	
-	public void agregarInteresadoC(Cliente x) 
+	public void agregarInteresado(Cliente x) 
 	{
-		clientesInteresados.add(x);
+		interesados.add(x);
 	}
 	
-	public void agregarInteresadoI(Inmobiliaria x) 
+	public void agregarInteresado(Inmobiliaria x) 
 	{
-		inmobiliariasInteresadas.add(x);
+		interesados.add(x);
 	}
 	
 
 	
-	private void Notificar(String mensaje)
+	private void notificar(String mensaje)
 	{
-		
+		for(Notificable x : interesados)
+		{
+			x.Notificar(mensaje);
+			
+		}
 	}
 }

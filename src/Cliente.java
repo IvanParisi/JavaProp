@@ -8,16 +8,23 @@ public class Cliente implements Notificable
 	
 	public Cliente(String apellido, String nombre, String telefono, String email) 
 	{
-		apellido = apellido;
-		nombre = nombre;
-		telefono = telefono;
-		email = email;
+		this.apellido = apellido;
+		this.nombre = nombre;
+		this.telefono = telefono;
+		this.email = email;
 	}
 
 
 	public void Notificar(String mensaje) 
 	{
-		System.out.println("Enviando SMS a " + nombre + apellido);
+		System.out.println("Enviando SMS a " + this.nombre + " " + this.apellido);
+	}
+
+
+	@Override
+	public String toString() 
+	{
+		return "Cliente [apellido = " + apellido + ", nombre = " + nombre + "]";
 	}
 	
 	
