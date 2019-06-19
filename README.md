@@ -1,4 +1,4 @@
 # JavaProp
 T.P Programacion Avanzada
 
-![alt text](https://drive.google.com/open?id=1Z79oa1vwFfreokcXloENKrsMTboIX0S5)
+![alt text](https://i.gyazo.com/b2836e0277ebb402d04b7b73c1d8e63f.png)
